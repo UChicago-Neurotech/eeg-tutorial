@@ -19,7 +19,7 @@ def code(text, form=False):
 def answer(text):
     """Markdown cell with a collapsible answer."""
     md(
-        "<details><summary><b>Answer (open after voting)</b></summary>\n\n"
+        "<details><summary><b>Answer (open after you've thought about it)</b></summary>\n\n"
         + text.strip("\n")
         + "\n\n</details>"
     )
@@ -37,8 +37,8 @@ By the end you should be able to explain, in plain English, **what each step of 
 
 ### How this works
 1. Run a cell with **Shift + Enter** (or the play button on its left).
-2. When you see **Predict**, *stop*. Don't run the next cell yet. Talk it over with your table, then we'll vote.
-3. Answers are hidden under **Answer**. Open it after the vote.
+2. When you see **Predict**, *stop*. Don't run the next cell yet. Think about it and talk it over with your table.
+3. Answers are hidden under **Answer**. Open it once you've made your guess.
 4. Cells titled **Setup** hide code you don't need to read. Just run them.
 
 *Lost or something broke?* Go to **Runtime → Run all** and you'll be caught up.
@@ -236,9 +236,6 @@ md(r"""
 
 So an EEG electrode can't measure "the voltage at Cz" on its own. Every channel is really
 **that electrode *minus* a reference electrode**.
-
-> **Analogy:** You can measure a building's height from sea level or from the street. Every number changes depending on which you pick,
-> but the *difference* between two buildings stays the same.
 """)
 
 code(r"""
